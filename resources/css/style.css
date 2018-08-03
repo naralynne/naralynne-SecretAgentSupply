@@ -23,8 +23,36 @@ html {
     margin-left: 0.5rem;
 }
 
+/* HEADER BANNER*/
+.banner {
+  display: flex;
+  background-image: url("../images/moto.jpg");
+  height: 25rem;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
+.banner_box {
+  width: 22rem;
+  height: 6.75rem;
+  background-color: black;
+  margin-top: 9rem;
+  margin-left: 8rem;
+  padding: 2rem 0 2rem 3rem;
+  position: absolute;
+}
 
- {
+.banner_box p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: .25rem;
+}
 
+.banner_box h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  line-height: 2.5rem;
 }
