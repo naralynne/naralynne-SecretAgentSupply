@@ -3,29 +3,36 @@ html {
   font-family: "Helvetica", sans-serif;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 /* HEADER */
 .logo_header {
-  padding: 0.66rem 0;
   background-color: black;
+  color: white;
+}
+
+.logo_header .container {
   display: flex;
   align-items: center;
+  padding: 0.66rem 0;
 }
 
 .logo_header img {
   height: 1.5rem;
-  margin: 0 0.5rem;
+  padding-right: 1rem;
 }
 
 .logo_header p {
-    font-size: 1rem;
-    color: white;
-    padding: 0.66rem;
-    margin-left: 0.5rem;
+  font-size: 1rem;
+  color: white;
+
 }
 
 /* HEADER BANNER*/
 .banner {
-  display: flex;
   background-image: url("../images/moto.jpg");
   height: 25rem;
   background-color: black;
@@ -35,100 +42,86 @@ html {
 }
 
 .banner_box {
-  width: 22rem;
-  height: 6.75rem;
+  width: 20rem;
   background-color: black;
-  margin-top: 9rem;
-  padding: 2rem 0 2rem 3rem;
-  position: absolute;
+  top: 9rem;
+  padding: 2rem 3rem;
+  position: relative;
 }
 
 .banner_box p {
   font-size: 1rem;
   color: white;
-  margin-bottom: .25rem;
+  margin-bottom: .25rem 0;
+
 }
 
 .banner_box h1 {
   font-size: 2rem;
   color: white;
   font-weight: bold;
-  line-height: 2.5rem;
+  line-height: 1.2;
 }
 
 /* NAVIGATION BAR -- Need to fix horizontal spacing of nav items */
 
-.navigation {
+nav {
   background-color: firebrick;
-  height: 1.5rem;
-  width: 100%;
-  padding: .75rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-
-}
-
-.departments {
   color: white;
-  font-size: 1rem;
-  display: inline-flex;
-  margin: 0 55px;
-  justify-content: space-between;
-
 }
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
 /* MAIN CONTENT ITEMS */
 
+/* OLD item container
 .items-container {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
+*/
 
 .items {
-  display: inline-block;
-  width: 30%;
-  border: solid 4px black;
-  justify-content: center;
-  align-content: center;
+  display: flex;
+  justify-content: space-between;
   margin: 3rem 2rem;
 }
 
+.item {
+  width: 30%;
+  border: solid 4px black;
+}
 .items img {
-  height: 7rem;
-  width: auto;
-  padding: 2rem 4rem;
+  display: flex;
   justify-content: center;
   align-items: center;
+  height: 9rem;
+  max-width: 8rem;
+  padding: 2rem 4rem;
 }
 
 .items p {
+  display: block;
   background-color: black;
   color: white;
-  width: 100%;
   height: 2rem;
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 1rem 0 0 0.5rem;
   position: relative;
   align-items: flex-end;
 }
 
-.Glasses img {
-  height: 75px;
-  width: auto;
-  padding-top: 3rem;
-
-}
-
-.Glasses p {
-  top: 35px;
-}
 
 /* LOCATION & HOURS -- Need to fix alignment*/
 .contact_info {
   display: flex;
-  width: 960px;
+  justify-content: space-between;
 }
 
 .heading {
@@ -137,31 +130,44 @@ html {
   padding: 1rem 0 2rem;
 }
 .Location, .Hours {
-  width: 45%;
-  display: inline-block;
-  margin: 1rem 2.22rem 4rem 1rem;
+  width: 35%;
+  display: block;
+  margin: 1rem 2rem;
 }
 
-.Location {
-  justify-content: flex-start;
-}
-
-.Hours {
-  justify-content: flex-end;
-
-}
 
 /* FOOTER */
 
-.footer {
-  height: 5rem;
+footer {
   background-color: black;
   color: white;
-  padding: 3rem 0;
+  padding: 5rem 0;
+  margin-top: 4rem;
 
 }
 
-.footer p {
+footer p {
   text-align: left;
   padding-top: 2rem;
+}
+
+@@media only screen and (max-width: 1024px) {
+  .logo_header p {
+    font-size: 3rem;
+    }
+  .items {
+    width: 47%;
+    }
+  .navigation {
+    background-color: firebrick;
+    height: 1.5rem;
+    width: 100%;
+    padding: .75rem 0;
+    }
+  .Glasses {
+    display: none;
+    }
+  .Location, .Hours {
+    width: 35%;
+    }
 }
