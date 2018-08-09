@@ -63,6 +63,24 @@ html {
   line-height: 1.2;
 }
 
+@media only screen and (max-width: 470px){
+  .banner {
+    height: 15rem;
+  }
+  .banner_box {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .banner_box h1 {
+    font-size: 1rem;
+  }
+  .banner_box p {
+    font-size: 0.77rem;
+  }
+
+  }
+
+
 /* NAVIGATION BAR -- Need to fix horizontal spacing of nav items */
 
 nav {
@@ -77,49 +95,81 @@ nav ul {
   padding: 0.75rem 0;
 }
 
+.tablet_nav {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  nav ul{
+    display: none;
+    }
+
+  .tablet_nav {
+      display: block;
+      text-align: center;
+    }
+}
+
 /* MAIN CONTENT ITEMS */
 
-/* OLD item container
-.items-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-*/
 
 .items {
   display: flex;
   justify-content: space-between;
-  margin: 3rem 2rem;
 }
 
 .item {
   width: 30%;
   border: solid 4px black;
-}
-.items img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 3rem 0;
+}
+
+.item img {
   height: 9rem;
   max-width: 8rem;
   padding: 2rem 4rem;
 }
 
-.items p {
+.item p {
   display: block;
   background-color: black;
   color: white;
   height: 2rem;
   text-align: center;
-  padding: 1rem 0 0 0.5rem;
-  position: relative;
-  align-items: flex-end;
+  padding: 1rem 0 0.5rem 0;
+
 }
 
+@media only screen and (max-width: 1024px) {
+  .item {
+    width: 47%;
+    margin: 0 auto;
+    }
 
-/* LOCATION & HOURS -- Need to fix alignment*/
-.contact_info {
+#Glasses-box {
+    display: none;
+    }
+
+  .item p {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .item {
+    width: 90%
+  }
+  #Watch-box {
+    display: none;
+  }
+}
+
+/* LOCATION & HOURS */
+.contact_info .container {
   display: flex;
   justify-content: space-between;
 }
@@ -127,15 +177,31 @@ nav ul {
 .heading {
   background-color: Black;
   color: white;
-  padding: 1rem 0 2rem;
+  padding: 1rem 2rem;
 }
 .Location, .Hours {
   width: 35%;
   display: block;
-  margin: 1rem 2rem;
+
 }
 
+@media only screen and (max-width: 1024px) {
+  .Location, .Hours {
+    width: 35%;
+    margin: 0.5rem 0;
+    }
+}
 
+@media only screen and (max-width: 470px) {
+  .contact_info .container {
+    display: block;
+    flex-wrap: wrap;
+  }
+  .Location, .Hours {
+    margin: 0.5rem auto;
+    width: 90%;
+  }
+}
 /* FOOTER */
 
 footer {
@@ -151,23 +217,8 @@ footer p {
   padding-top: 2rem;
 }
 
-@@media only screen and (max-width: 1024px) {
-  .logo_header p {
-    font-size: 3rem;
-    }
-  .items {
-    width: 47%;
-    }
-  .navigation {
-    background-color: firebrick;
-    height: 1.5rem;
-    width: 100%;
-    padding: .75rem 0;
-    }
-  .Glasses {
-    display: none;
-    }
-  .Location, .Hours {
-    width: 35%;
-    }
+@media only screen and (max-width: 470px) {
+  footer p {
+    text-align: center;
+  }
 }
